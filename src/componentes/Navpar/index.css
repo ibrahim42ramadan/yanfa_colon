@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* height: 140px; */
+}
+.HiroSection ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.HiroSection ul li {
+  padding: 10px;
+}
+.creat {
+  border: 1px solid rgb(177, 177, 232);
+  padding: 7px;
+  margin-top: -5px;
+  border-radius: 10px;
+  background-color: transparent;
+
+  /* padding: 10px; */
+}
+.HiroSection button:hover {
+  box-shadow: 1px 1px 10px rgb(16, 223, 16);
+}
+.searchDiv {
+  display: flex;
+}
+.searchDiv input {
+  direction: rtl;
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  border: 1px solid rgb(95, 197, 138);
+  /* padding: 10px; */
+}
+.Logo a {
+  margin-right: 40px;
+  font-size: 40px;
+  font-weight: 400;
+  color: #00d38d !important;
+}
+.searchDiv button {
+  padding: 4px;
+  background-color: #252541;
+  color: white;
+}

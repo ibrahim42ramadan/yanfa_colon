@@ -1,0 +1,22 @@
+
+.SiedParForUserSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+}
+
+.SiedParForUserSection ul li {
+  background-color: #252541;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 6px;
+}
+
+.SiedParForUserSection ul li a {
+  color: white;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  padding: px;
+}

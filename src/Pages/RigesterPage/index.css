@@ -1,0 +1,9 @@
+.RegisterPage {
+}
+.RegisterPage form {
+  padding: 10px;
+  color: rgb(150, 215, 150);
+  font-weight: 500;
+}
+.RegisterPage form input {
+}

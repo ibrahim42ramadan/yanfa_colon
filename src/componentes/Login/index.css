@@ -1,0 +1,21 @@
+.LoginUserSection {
+  direction: rtl;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.LoginUserSection form {
+  border: 1px solid gray;
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgb(0, 255, 0);
+}
+.LoginUserSection form button {
+  padding: 10px;
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 10px;
+  color: white;
+  background-color: #19b962;
+}

@@ -1,0 +1,36 @@
+.FooterSection {
+  background-color: #252543;
+  font-size: 13px;
+}
+.FooterSection ul {
+  margin-top: 30px;
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  justify-content: center;
+  color: #7b7a8e;
+  font-size: 13px;
+}
+.FooterSection ul li a {
+  color: #7b7a8e !important;
+}
+.linkItem li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ababf2;
+  color: white;
+}
+.endFooter {
+  text-align: center;
+  color: #ababf2;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+.search_container {
+  height: 100vh;
+}

@@ -1,0 +1,34 @@
+.cardItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgb(252, 252, 252);
+  align-items: flex-end;
+  gap: 10px;
+  height: 300px;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+.cardItem h5 {
+  position: relative;
+}
+.cardItem h5::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-color: rgba(94, 225, 105, 0.5);
+
+  border-radius: 10px;
+}
+.cardItem:hover {
+  margin-top: -10px;
+}
+
+.Icon {
+  overflow: hidden;
+}

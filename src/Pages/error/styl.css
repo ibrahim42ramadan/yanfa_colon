@@ -1,0 +1,17 @@
+.error {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: rgb(0 28 64);
+  color: white;
+}
+.error h1 {
+  font-size: 100px;
+  color: rgb(149, 149, 149) !important;
+}
+.error .content {
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
