@@ -8,6 +8,8 @@ export const get_all_users = createAsyncThunk(
   "users_Slice/get_all_users ",
   async () => {
     const response = await axios.get(`${api_Link}/users`);
+    console.log(response.data);
+
     return response.data;
   }
 );

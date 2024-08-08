@@ -5,6 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { apiLink } from "../../api/asetss";
 
 export default function LoginUser() {
   const [email, setemail] = useState();
@@ -22,8 +23,13 @@ export default function LoginUser() {
             onSubmit={(event) => {
               event.preventDefault();
               axios
-                .post("http://localhost:4000/login", user)
+                .post(
+                  `https://yanfaa-server-production.up.railway.app/users`,
+                  user
+                )
                 .then((response) => {
+                  console.log(response.data);
+
                   const token = response.data.accessToken;
                   const user = response.data.user;
 
@@ -33,7 +39,7 @@ export default function LoginUser() {
 
                 .catch((error) => {
                   console.log(error);
-                  alert(error.message + "\n" + " enter your email address");
+                  // alert(error.message + "\n" + " enter your email address");
                 });
             }}
           >

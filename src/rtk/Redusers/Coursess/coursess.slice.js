@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { apiLink } from "../../../api/asetss";
 // Get_all_COURSES
 export const get_all = createAsyncThunk("Coursess_Slice/get_all", async () => {
-  const response = await axios.get("http://localhost:4000/Courcess");
+  const response = await axios.get(`${apiLink}/Courcess`);
   return response.data;
 });
 // get on courcs
