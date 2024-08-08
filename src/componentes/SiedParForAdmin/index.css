@@ -3,14 +3,56 @@
   margin: 0;
   padding: 0;
   direction: rtl;
+  height: 100vh;
+  background-color: #2e4053; /* لون خلفية داكن */
+  border-radius: 10px;
+  overflow: hidden;
 }
-.SiedParForAdmin ul li a {
-  color: white;
-  width: 100%;
-  display: block;
-}
+
 .SiedParForAdmin ul li {
-  padding: 10px;
-  background-color: rgb(41, 43, 43);
-  margin: 6px;
+  position: relative;
+  padding: 15px;
+  margin: 8px 6px;
+  background-color: transparent;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.SiedParForAdmin ul li a {
+  color: #ecf0f1; /* لون النص */
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+  font-size: 1.1em;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.SiedParForAdmin ul li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #0eff72; /* لون أخضر خفيف */
+  transition: width 0.5s;
+}
+
+.SiedParForAdmin ul li a:hover {
+  color: #ffffff; /* تباين لون النص */
+  transform: scale(1.05);
+}
+
+.SiedParForAdmin ul li:hover,
+.SiedParForAdmin ul li:hover::before {
+  width: 100%;
+  transform: translateY(-3px);
+}
+
+.SiedParForAdmin ul li:hover a {
+  transform: translateX(5px);
 }

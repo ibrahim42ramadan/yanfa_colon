@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 export default function CategoryCard({ el }) {
   return (
     <>
-      <div className="col-lg-3 col-md-6 col-sm-12">
+      <div key={el.id} className="col-lg-3 col-md-6 col-sm-12">
         <div className="cardItem">
           <div className="Icon mb-3">
             <img
               src={el.thomnaile}
-              class="img-fluid rounded-top"
+              className="img-fluid rounded-top"
               alt={el.departmentName}
-            />
+            ></img>
           </div>
           <h5>{el.departmentName}</h5>
           <Link to={`/Dashbord/Category/${el.id}`} className="btn text-success">

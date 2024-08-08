@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-const api_Link = "http://localhost:4000";
+import { apiLink } from "../../../api/asetss";
+const api_Link = apiLink;
 // get all users
 export const get_all_users = createAsyncThunk(
   "users_Slice/get_all_users ",
@@ -37,6 +37,16 @@ export const delete_User = createAsyncThunk(
   }
 );
 
+// get_users_by_type
+
+export const get_users_by_type = createAsyncThunk(
+  "users_Slice/get_users_by_type",
+  async (type) => {
+    const clean_type = type.toLowerCase().trim();
+    const response = await axios.get(`${api_Link}/users?type=${clean_type}`);
+    return response.data;
+  }
+);
 const users_Slice = createSlice({
   name: "users_Slice",
   initialState: [],
@@ -63,6 +73,12 @@ const users_Slice = createSlice({
     });
     builder.addCase(delete_User.rejected, (state, action) => {
       return state;
+    });
+    // get_users_by_type
+    builder.addCase(get_users_by_type.fulfilled, (state, action) => {
+      console.log(action.payload);
+
+      return action.payload;
     });
   },
 });

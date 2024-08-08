@@ -6,7 +6,7 @@ export default function SiedParForAdmin() {
   return (
     <>
       <section className="SiedParForAdmin ">
-        <ul>
+        <ul className="">
           <li>
             <Link to="SiedParForUser">بياناتي</Link>
           </li>

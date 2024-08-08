@@ -1,9 +1,14 @@
+.table {
+  border-radius: 10px;
+  /* background-color: #8484af; */
+}
 .users_table {
   border: 1px solid #ccc;
+  border-radius: 10px;
   width: 100%;
+  margin: 0;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  box-shadow: 1px 1px 10px 5px rgb(167, 242, 167);
+  box-shadow: 1px 1px 10px 1px rgb(167, 242, 167);
 }
 .users_table th {
   color: #e3e3e3;
@@ -13,8 +18,9 @@
 }
 
 .users_table tbody tr {
-  border-bottom: 1px solid #c7c7de;
-  height: 2px;
+  border-bottom: 2px solid #c7c7de;
+  height: 20px;
+  margin-bottom: 2px;
 }
 
 .users_table tbody td {

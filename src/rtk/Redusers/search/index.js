@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { apiLink } from "../../../api/asetss";
 
 // get search values
 export const get_search_values = createAsyncThunk(
@@ -7,7 +8,7 @@ export const get_search_values = createAsyncThunk(
   async (searchValue) => {
     // fetch data from API
     const response = await axios.get(
-      `http://localhost:4000/courcess?courseName_like=${searchValue}`
+      `${apiLink}/courcess?courseName_like=${searchValue}`
     );
     return response.data;
   }

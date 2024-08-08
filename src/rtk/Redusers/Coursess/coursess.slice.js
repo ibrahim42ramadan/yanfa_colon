@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
-
+import { apiLink } from "../../../api/asetss";
 // Get_all_COURSES
 export const get_all = createAsyncThunk("Coursess_Slice/get_all", async () => {
   const response = await axios.get("http://localhost:4000/Courcess");
@@ -12,7 +12,7 @@ export const get_all = createAsyncThunk("Coursess_Slice/get_all", async () => {
 export const get_one = createAsyncThunk(
   "Coursess_Slice/get_one",
   async (id) => {
-    const response = await axios.get(`http://localhost:4000/Courcess/${id}`);
+    const response = await axios.get(`${apiLink}/Courcess/${id}`);
     return response.data;
   }
 );
@@ -20,10 +20,7 @@ export const get_one = createAsyncThunk(
 export const add_cours = createAsyncThunk(
   "Coursess_Slice/add_cours",
   async (payload) => {
-    const response = await axios.post(
-      "http://localhost:4000/C ourcess",
-      payload
-    );
+    const response = await axios.post(`${apiLink}/Courcess`, payload);
     if (response.statusCode === 200 || response.statusCode === 201)
       alert("Success");
     return response.data;
@@ -34,12 +31,18 @@ export const add_cours = createAsyncThunk(
 export const edit_cours = createAsyncThunk(
   "Coursess_Slice/edit_cours",
   async (payload) => {
+    console.log(payload);
     const response = await axios.put(
-      `http://localhost:4000/C ourcess/${payload.id}`,
+      `${apiLink}s/Courcess/${payload.id}`,
       payload.data
     );
-    if (response.statusCode === 200 || response.statusCode === 201)
-      toast.success(" updated Success");
+
+    if (response.statusText === "OK" && response.data.isfavoret) {
+      toast.success("🎈" + "Course add to favorets successfully");
+    } else {
+      toast.error("💡" + "Course removed from favorets");
+    }
+
     return response.data;
   }
 );

@@ -1,8 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 // get all
+import { apiLink } from "../../../api/asetss";
 export const get_all = createAsyncThunk("Category_Slice/get_all", async () => {
-  const response = await axios.get("http://localhost:4000/departmentes");
+  const response = await axios.get(`${apiLink}/departmentes`);
   console.log(response.data);
   return response.data;
 });
@@ -12,9 +13,7 @@ export const get_all = createAsyncThunk("Category_Slice/get_all", async () => {
 export const get_one = createAsyncThunk(
   "Category_Slice/get_one",
   async (id) => {
-    const response = await axios.get(
-      `http://localhost:4000/departmentes/${id} `
-    );
+    const response = await axios.get(`${apiLink}/departmentes/${id} `);
     return response.data;
   }
 );

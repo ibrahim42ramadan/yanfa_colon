@@ -2,6 +2,8 @@ import React from "react";
 import "./index.css";
 export default function HomSection() {
   const user = JSON.parse(localStorage.getItem("user"));
+  const img =
+    "https://images.pexels.com/photos/4143800/pexels-photo-4143800.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
   return (
     <>
       <section className="HommSection mb-5">
@@ -9,7 +11,7 @@ export default function HomSection() {
           <div className="row ">
             <div className="col-lg-6 col-sm-12">
               <div className="HiroImg">
-                <img src={user.thomnaile}></img>{" "}
+                <img src={user ? user.thomnaile : img}></img>{" "}
               </div>
             </div>
             <div className="col-lg-6 col-sm-12">
